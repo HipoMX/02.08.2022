@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-
+        <meta charset="UTF-8"/>
+        <title>Anime</title>
     </head>
     <body>
         <!--La página de hoy-->
@@ -35,7 +36,33 @@
             </section>
             <section>
                 <h3>Anime forms</h3>
+                <!--Poner un button debajo de un input que a su vez está dentro de un formulario, enviará la información al lugar indicado-->
+                <form action="https://www.facebook.com/eduardodaniel.hipolitogutierrez">
+                    <input type="text" name='email' placeholder="Email Adress" required/>
+                    <button type="submit">Submit</button>
+                    <!--Poner el name del mismo nombre en ambos inputs radio, hace que automáticamente al seleccionar uno, se
+                    deselecciona el otro, de igual forma se le debe colocar el "value" ya que si no lo hacemos y lo mandamos
+                tal como está, como no tiene ningún atributo, solo se recibiría "indoor-outdoor=on", lo cual no es util si tenemos
+                varios botones-->
+                <fieldset>
+                    <legend>¿Te gusta el anime?, ¿si o no? pendejo</legend>
+                    <label><input type="radio" id="yes" name="yes-no" value="yes" checked> Yes</label>
+                    <label><input type="radio" id="no" name="yes-no" value="no"> No</label>
+                </fieldset>
+                <fieldset>
+                    <!--El checkbox se utiliza cuando se puede dar más de una respuesta-->
+                    <legend>¿Cuáles son tus generos de ánime favoritos?</legend>
+                    <!--Podemos conectar estos elementos sin la necesidad de colocar todo en un mismo label,
+                    puedo hacer el label aparte y colocar el atributo "for" conectando con id en cuestión-->
+                    <input type="checkbox" id="shonen" name="generos" value="shonen" checked> <label for="shonen">Shonen</label>
+                    <input type="checkbox" id="romántico" name="generos" value="romántico"> <label for="romántico">Romántico</label>
+                    <input type="checkbox" id="terror" name="generos" value="terror"> <label for="terror">Terror</label>
+                </fieldset>
+                </form>
             </section>
         </main>
+        <footer>
+            <p>No Copyright - <a href="https://www.facebook.com/eduardodaniel.hipolitogutierrez/" target="_blank">Eduardo Hipólito</a></p>
+        </footer>
     </body>
 </html>
